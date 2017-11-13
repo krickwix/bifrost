@@ -2,6 +2,9 @@
   <name>{{ vm_name }}</name>
   <memory unit='MiB'>{{ test_vm_memory_size }}</memory>
   <vcpu>{{ test_vm_cpu_count }}</vcpu>
+  <cpu mode='host-passthrough'>
+    <cache mode='passthrough'/>
+  </cpu>
   <os>
     <type arch='{{ test_vm_arch }}' machine='{{ test_vm_machine }}'>hvm</type>
     <boot dev='network'/>
