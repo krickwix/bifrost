@@ -35,6 +35,7 @@ project_domain_id = default
 
 {% else %}
 auth_strategy = {{ ironic_auth_strategy | default('noauth') }}
+auth_url = 
 {% endif %}
 
 {% if enable_keystone is defined and enable_keystone | bool == true %}
